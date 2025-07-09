@@ -9,9 +9,7 @@ export default defineConfig({
     federation({
       name: 'admin',
       filename: 'remoteEntry.js',
-      exposes: {
-        './Button': './src/components/temp/ExampleButton.tsx',
-      },
+      exposes: {},
       shared: ['react', 'react-dom'],
     }),
   ],
