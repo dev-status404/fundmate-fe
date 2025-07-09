@@ -62,16 +62,30 @@ const Sidebar = () => {
       <div className="w-full flex flex-col gap-[14px]">
         <p className="text-[15px] text-[#999999] ml-[12px] font-semibold">나의 활동 (메이커)</p>
         <div className="flex flex-col gap-[10px]">
-          {["펀딩 내역", "통계 관리", "결제 관리", "프로젝트 만들기"].map((label, idx) => (
-            <button
-              key={idx}
-              className="text-left text-[22px] text-black font-medium pl-[10px] hover:text-[#5FBDFF] transition-colors"
-              onClick={() => {
-              }}
-            >
-              {label}
-            </button>
-          ))}
+          <button
+            className="text-left text-[22px] text-black font-medium pl-[10px] hover:text-[#5FBDFF] transition-colors"
+            onClick={() => navigate("/fundinghistory")}
+          >
+            펀딩 내역
+          </button>
+          <button
+            className="text-left text-[22px] text-black font-medium pl-[10px] hover:text-[#5FBDFF] transition-colors"
+            onClick={() => navigate("/statistics-management")}
+          >
+            통계 관리
+          </button>
+          <button
+            className="text-left text-[22px] text-black font-medium pl-[10px] hover:text-[#5FBDFF] transition-colors"
+            onClick={() => navigate("/PaymentManagement")}
+          >
+            결제 관리
+          </button>
+          <button
+            className="text-left text-[22px] text-black font-medium pl-[10px] hover:text-[#5FBDFF] transition-colors"
+            onClick={() => navigate("/create-project")}
+          >
+            프로젝트 만들기
+          </button>
         </div>
       </div>
     </aside>

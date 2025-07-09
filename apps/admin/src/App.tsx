@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Sidebar from './components/common/Sidebar';
 import { Header } from '@repo/ui/components';
 import FundingHistory from './pages/FundingHistory/FundingHistory';
+import PaymentManagement from './pages/PaymentManagement/PaymentManagement';
 
 // 헤더 + 사이드바가 포함된 레이아웃
 function LayoutWithSidebarAndHeader() {
@@ -38,12 +39,14 @@ const App = () => (
       {/* 헤더 + 사이드바가 포함된 마이페이지 관련 경로 */}
       <Route element={<LayoutWithSidebarAndHeader />}>
         <Route path="/fundinghistory" element={<FundingHistory />} />
+        <Route path="/paymentmanagement" element={<PaymentManagement />} />
       </Route>
 
       {/* 헤더만 포함된 페이지 */}
       <Route element={<LayoutWithHeader />}>
         <Route path="/userprofile-settings" element={<div>유저 프로필 설정 페이지</div>} />
         <Route path="/withdrawal" element={<div>회원 탈퇴 페이지</div>} />
+        
       </Route>
     </Routes>
   </BrowserRouter>

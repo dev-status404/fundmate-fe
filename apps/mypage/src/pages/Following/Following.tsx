@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Header } from "../../../../../packages/ui/components/Header";
 import { FollowingCard } from "./FollowingCard";
 
 interface FollowingUser {
@@ -38,8 +37,6 @@ const Following = () => {
 
   return (
     <div className="flex flex-col w-full min-h-screen">
-      {/* Header */}
-      <Header />
 
       {/* Main */}
       <div className="flex flex-1">

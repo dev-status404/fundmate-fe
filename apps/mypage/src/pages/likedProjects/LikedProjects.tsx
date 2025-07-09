@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import Sidebar from "../../components/common/Sidebar";
 import { VerticalCard } from "./VerticalCard";
-import { Header } from "../../../../../packages/ui/components/Header";
 import type { Project } from "../../api/getLikedProjects"; 
 
 
@@ -61,12 +59,10 @@ const LikedProjects = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <Header />
 
       {/* Sidebar + Main */}
       <div className="flex flex-1">
-        <Sidebar />
+
 
         {/* Main Content */}
         <main className="flex-1 pl-[300px] pr-[50px] py-[30px] ml-[270px]">

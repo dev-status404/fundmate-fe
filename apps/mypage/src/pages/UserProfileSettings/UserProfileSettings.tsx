@@ -1,5 +1,4 @@
 import { useState, useRef, ChangeEvent } from "react";
-import { Header } from "../../../../../packages/ui/components/Header";
 import { useNavigate } from "react-router-dom";
 
 const categories = [
@@ -62,7 +61,6 @@ const UserProfileSetting = () => {
 
   return (
     <div className="flex flex-col w-full min-h-screen">
-      <Header />
       <main className="flex flex-col items-center mt-[60px]">
         <h2 className="text-2xl font-semibold mr-[480px] mb-8">내 정보 설정</h2>
 

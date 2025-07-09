@@ -1,4 +1,3 @@
-import { Header } from "../../../../../packages/ui/components/Header";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import type { SupportedProject } from "../../api/supportedProjects"; 
@@ -35,9 +34,6 @@ const SupportedProjects = () => {
 
   return (
     <div>
-      {/* Header */}
-      <Header />
-
       <div className="flex justify-center mt-[80px]">
 
         {/* Main Content */}

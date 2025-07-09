@@ -1,5 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-import { Header } from "../../../../../packages/ui/components/Header";
+import { useNavigate } from 'react-router-dom'; 
 import ReviewListItem from './ReviewListItem';
 
 const MyReviews = () => {
@@ -40,7 +39,6 @@ const MyReviews = () => {
 
   return (
     <>
-      <Header />
       <div className="flex max-w-[1190px] mx-auto">
         
         <div className="flex flex-col items-center h-[1100px] flex-1 ml-[120px]">

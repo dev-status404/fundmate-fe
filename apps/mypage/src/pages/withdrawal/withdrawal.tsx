@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header } from "../../../../../packages/ui/components/Header";
 import fundmateLogo from "../../../../../packages/ui/assets/images/Fundmate.png";
 
 const Withdrawal = () => {
@@ -16,10 +15,9 @@ const Withdrawal = () => {
 
   return (
     <div className="flex flex-col w-full min-h-screen">
-      <Header />
-      <main className="flex flex-col justify-center items-center flex-grow px-4">
+      <main className="flex flex-col justify-center items-center flex-grow px-4 mb-80">
         {/* 컨텐츠 박스 */}
-        <div className="flex flex-col justify-center items-center w-[90%] max-w-[500px] p-8 gap-8 mb-[50px]">
+        <div className="flex flex-col justify-center items-center w-[100%] max-w-[500px] p-8 gap-8">
 
           {/* 로고 */}
           <img
