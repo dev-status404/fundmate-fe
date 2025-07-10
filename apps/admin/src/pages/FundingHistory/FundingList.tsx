@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { VerticalCard } from '@repo/ui/components';
 
-const FundingList = () => {
+const fundingList = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedRange, setSelectedRange] = useState<string | null>(null);
 
@@ -65,4 +65,4 @@ const FundingList = () => {
   );
 };
 
-export default FundingList;
+export default fundingList;

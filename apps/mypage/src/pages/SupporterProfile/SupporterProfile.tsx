@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Header } from "../../../../../packages/ui/components/Header";
 
 interface Supporter {
   nickname: string;
@@ -40,7 +39,7 @@ const SupporterProfile = () => {
   if (!supporter) {
     return (
       <>
-        <Header />
+        
         <div className="flex flex-col items-center w-full mt-[60px]">
           <div>로딩중...</div>
         </div>
@@ -50,7 +49,6 @@ const SupporterProfile = () => {
 
   return (
     <>
-      <Header />
       <div className="flex flex-col items-center w-full">
         {/* 상단 프로필 박스 */}
         <div className="flex items-center p-[10px] gap-[20px] w-[1300px] h-[159px] bg-white mt-[60px]">

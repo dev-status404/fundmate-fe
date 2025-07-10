@@ -30,7 +30,7 @@ const getCurrentDateString = (): string => {
   return `${yyyy}. ${mm}. ${dd} ${hh}:${min}`;
 };
 
-const PaymentSummary: React.FC = () => {
+const paymentSummary: React.FC = () => {
   const [summary, setSummary] = useState<PaymentSummaryData>({
     totalPayments: 12,
     totalRevenue: '2,750,000',
@@ -52,7 +52,7 @@ const PaymentSummary: React.FC = () => {
       {/* 상단: 제목 + 새로고침 아이콘 + 날짜 */}
       <div className="w-full flex justify-between items-start">
         <div className="flex gap-[15px] items-center">
-          <span className="font-inter font-bold text-[20px] leading-[17px] text-black">
+          <span className="font-inter font-bold text-[20px] ml-7 leading-[17px] text-black">
             오늘의 결제 요약
           </span>
           <RotateCcw
@@ -125,4 +125,4 @@ const PaymentSummary: React.FC = () => {
   );
 };
 
-export default PaymentSummary;
+export default paymentSummary;

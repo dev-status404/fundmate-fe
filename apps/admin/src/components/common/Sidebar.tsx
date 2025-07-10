@@ -70,7 +70,7 @@ const Sidebar = () => {
           </button>
           <button
             className="text-left text-[22px] text-black font-medium pl-[10px] hover:text-[#5FBDFF] transition-colors"
-            onClick={() => navigate("/statistics-management")}
+            onClick={() => navigate("/stats")}
           >
             통계 관리
           </button>

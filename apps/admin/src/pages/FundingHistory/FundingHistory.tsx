@@ -1,5 +1,5 @@
-import CompletedFundingCard from './CompletedFundingCard';
-import FundingList from './FundingList';
+import CompletedFundingcard from './completedFundingcard';
+import FundingList from './fundingList';
 
 const FundingHistory = () => {
   return (
@@ -7,7 +7,7 @@ const FundingHistory = () => {
       <h2 className="mt-[40px] text-[24px] font-semibold ">펀딩 내역</h2>
       {/* 완료된 펀딩 박스 */}
       <div className="bg-white border border-gray-300 rounded-md p-5">
-        <CompletedFundingCard />
+        <CompletedFundingcard />
       </div>
 
       {/* 펀딩 리스트 박스 */}

@@ -3,13 +3,13 @@ import Sidebar from './components/common/Sidebar';
 import { Header } from "@repo/ui/components";
 
 import Mypage from './pages/Mypage/Mypage';
-import SupportedProjects from './pages/supportedProject/supportedProjects';
-import LikedProjects from './pages/likedProjects/LikedProjects';
+import SupportedProjects from './pages/Supportedproject/supportedProjects';
+import LikedProjects from './pages/Likedprojects/LikedProjects';
 import Following from './pages/Following/Following';
-import UserProfileSettings from './pages/UserProfileSettings/UserProfileSettings';
-import Withdrawal from './pages/withdrawal/withdrawal';
-import MyReviews from './pages/MyReviews/MyReviews';
-import SupporterProfile from './pages/SupporterProfile/SupporterProfile';
+import UserProfileSettings from './pages/Userprofilesettings/UserProfileSettings';
+import Withdrawal from './pages/Withdrawal/withdrawal';
+import MyReviews from './pages/Myreviews/MyReviews';
+import SupporterProfile from './pages/Supporterprofile/SupporterProfile';
 
 // 헤더 + 사이드바가 포함된 레이아웃
 function LayoutWithSidebarAndHeader() {
