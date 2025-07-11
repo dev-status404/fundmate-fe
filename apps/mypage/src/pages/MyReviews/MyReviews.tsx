@@ -1,5 +1,6 @@
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import ReviewListItem from './ReviewListItem';
+import { MediumFont, Title } from '@repo/ui/styles';
 
 const MyReviews = () => {
   const navigate = useNavigate();
@@ -38,54 +39,53 @@ const MyReviews = () => {
   ];
 
   return (
-    <>
-      <div className="flex max-w-[1190px] mx-auto">
-        
-        <div className="flex flex-col items-center h-[1100px] flex-1 ml-[120px]">
-            <h2 className="mr-[1040px] text-[25px] font-semibold mt-[70px] mb-10">내 후기</h2>
-          <div className="w-[1210px] h-[770px] ml-[90px] bg-white border border-gray-300 rounded-[5px] p-[20px] flex flex-col items-center gap-[20px]">
-            <h2 className="text-[20px] mr-[420px] mt-[10px] mb-10 font-bold w-[725px]">작성한 후기 목록</h2>
-            
-            {/* 상품명 / 후기 헤더 */}
-            <div className="flex items-center mt-[-20px] w-[1100px] h-[30px] border-b border-gray-300">
-              <div className="flex justify-center items-center w-[310px] text-[18px] font-medium text-black">
-                상품명
-              </div>
-              <div className="flex justify-center items-center w-[460px] text-[18px] font-medium text-black">
-                후기
-              </div>
-            </div>
-
-            <div className="flex flex-col items-start w-[900px] ml-[70px]">
-              {reviews.map((item) => (
-                <ReviewListItem
-                  key={item.id}
-                  productName={item.productName}
-                  review={item.review}
-                  imageUrl={item.imageUrl}
-                  onClick={() => navigate(`/product/${item.id}`)}
-                />
-              ))}
-            </div>
-
-            {/* 페이지네이션 */}
-            <div className="flex justify-center items-center mt-[25px] gap-[10px]">
-              <button>{'<<'}</button>
-              <button>{'<'}</button>
-              <div className="flex gap-[15px] text-[23px]">
-                <span className="text-black">1</span>
-                <span className="text-[#7E7C7C]">2</span>
-                <span className="text-[#7E7C7C]">3</span>
-                <span className="text-[#7E7C7C]">4</span>
-                <span className="text-[#7E7C7C]">5</span>
-              </div>
-              <button>{'>'}</button>
-              <button>{'>>'}</button>
-            </div>
+    <div className="flex flex-col items-start w-full">
+      <Title>작성한 후기 목록</Title>
+      <div className='flex flex-col gap-5 w-full'>
+        <div className="grid grid-cols-[200px_1fr_1fr] w-full">
+          <div></div>
+          <div className="flex justify-start items-center">
+            <MediumFont>
+              상품명
+            </MediumFont>
+          </div>
+          <div className="flex justify-start items-center">
+            <MediumFont>
+              후기
+            </MediumFont>
           </div>
         </div>
+
+        <div className="flex flex-col items-start gap-4 w-full">
+          {reviews.map((item) => (
+            <ReviewListItem
+              key={item.id}
+              productName={item.productName}
+              review={item.review}
+              imageUrl={item.imageUrl}
+              onClick={() => navigate(`/product/${item.id}`)}
+            />
+          ))}
+        </div>
       </div>
-    </>
+
+      {/* 페이지네이션 */}
+      <div className='flex w-full justify-center'>
+        <div className="flex justify-center items-center mt-[25px] gap-[10px]">
+          <button>{'<<'}</button>
+          <button>{'<'}</button>
+          <div className="flex gap-[15px] text-[23px]">
+            <span className="text-black">1</span>
+            <span className="text-[#7E7C7C]">2</span>
+            <span className="text-[#7E7C7C]">3</span>
+            <span className="text-[#7E7C7C]">4</span>
+            <span className="text-[#7E7C7C]">5</span>
+          </div>
+          <button>{'>'}</button>
+          <button>{'>>'}</button>
+        </div>
+      </div>
+    </div>
   );
 };
 
