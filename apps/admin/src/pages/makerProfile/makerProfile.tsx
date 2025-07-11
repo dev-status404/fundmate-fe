@@ -29,7 +29,6 @@ const MakerProfile: React.FC<MakerProfileProps> = ({
 }) => {
   const [isFollowing, setIsFollowing] = useState(false);
 
-  // ✅ 임시 Mock 데이터 (projects가 undefined거나 빈 배열일 때 대체)
   const mockProjects: Project[] = [
     {
       id: 1,
