@@ -1,35 +1,59 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import Sidebar from './components/common/Sidebar';
+import { Header } from '@repo/ui/components';
+import FundingHistory from './pages/fundingHistory/fundingHistory';
+import PaymentManagement from './pages/paymentManagement/paymentManagement';
+import MakerProfile from './pages/makerProfile/makerProfile';
+import StatsPage from './pages/stats/statsPage';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+// 헤더 + 사이드바가 포함된 레이아웃
+function LayoutWithSidebarAndHeader() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+     <div className="flex w-full px-10 gap-3">
+  <aside className="w-[520px] shrink-0">
+    <Sidebar />
+  </aside>
+
+  <main className="flex-grow">
+    <Outlet />
+  </main>
+</div>
+    </div>
   );
 }
+
+// 헤더만 포함된 레이아웃
+function LayoutWithHeader() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow p-8">
+        <Outlet />
+      </main>
+    </div>
+  );
+}
+
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      {/* 헤더 + 사이드바가 포함된 페이지 */}
+      <Route element={<LayoutWithSidebarAndHeader />}>
+        <Route path="/fundinghistory" element={<FundingHistory />} />
+        <Route path="/paymentmanagement" element={<PaymentManagement />} />
+        <Route path="/stats" element={<StatsPage />} />
+      </Route>
+
+      {/* 헤더만 포함된 페이지 */}
+      <Route element={<LayoutWithHeader />}>
+        <Route path="/userprofile-settings" element={<div>유저 프로필 설정 페이지</div>} />
+        <Route path="/withdrawal" element={<div>회원 탈퇴 페이지</div>} />
+        <Route path="/makerprofile" element={<MakerProfile />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
